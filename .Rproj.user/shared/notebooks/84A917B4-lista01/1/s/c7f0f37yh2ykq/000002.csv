@@ -1,0 +1,15 @@
+"0","```r
+N <- 10^7
+x <- runif(N)
+y <- runif(N)
+
+inside <- (x^2 + y^2) <= 1
+mean(inside)*4
+```"
+"1","[1] 3.141446
+"
+"0","```r
+# plot(x, y, xlim = c(0, 1), ylim = c(0, 1),
+#      col = ifelse(inside, \"blue\", \"red\"),
+#      pch = 19, cex = 0.25)
+```"

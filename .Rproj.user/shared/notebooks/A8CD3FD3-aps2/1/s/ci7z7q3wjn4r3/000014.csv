@@ -1,0 +1,7 @@
+"0",""
+"0","(idd_mean <- data.frame(svymean(~ mpol_leader + conf_wmov + w_lcorrupt + "
+"0","                                  wsame_rights + prostitution + abortion + "
+"0","                                  divorce + m_beatw,"
+"0","                                svy,"
+"0","                                na.rm = TRUE,"
+"0","                                parm=NA)))"

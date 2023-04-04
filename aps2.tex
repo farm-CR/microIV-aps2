@@ -1,0 +1,708 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={APS2},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{APS2}
+\author{}
+\date{\vspace{-2.5em}2023-03-17}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
+## v dplyr     1.1.0     v readr     2.1.4
+## v forcats   1.0.0     v stringr   1.5.0
+## v ggplot2   3.4.1     v tibble    3.2.0
+## v lubridate 1.9.2     v tidyr     1.3.0
+## v purrr     1.0.1     
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+## i Use the ]8;;http://conflicted.r-lib.org/conflicted package]8;; to force all conflicts to become errors
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(survey)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Carregando pacotes exigidos: grid
+## Carregando pacotes exigidos: Matrix
+## 
+## Attaching package: 'Matrix'
+## 
+## The following objects are masked from 'package:tidyr':
+## 
+##     expand, pack, unpack
+## 
+## Carregando pacotes exigidos: survival
+## 
+## Attaching package: 'survey'
+## 
+## The following object is masked from 'package:graphics':
+## 
+##     dotchart
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(corrr)}
+\FunctionTok{library}\NormalTok{(readr)}
+\FunctionTok{library}\NormalTok{(ROCit)}
+\end{Highlighting}
+\end{Shaded}
+
+Carregando a base
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{wvs\_df }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"WVS\_Cross{-}National\_Wave\_7\_csv\_v5\_0.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 94278 Columns: 606
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (12): version, doi, B_COUNTRY_ALPHA, C_COW_ALPHA, LNGE_ISO, X002_02B, V...
+## dbl (594): A_WAVE, A_YEAR, A_STUDY, B_COUNTRY, C_COW_NUM, D_INTERVIEW, S007,...
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+Filtrando e manipulando para obter os dados desejados
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Selecionar as variaveis a serem utilizadas}
+\CommentTok{\# Remover as observacoes com valores faltantes ou perguntas nao respondidas}
+\NormalTok{wvs }\OtherTok{\textless{}{-}}\NormalTok{ wvs\_df }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{as\_tibble}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(W\_WEIGHT, }\AttributeTok{country =}\NormalTok{ B\_COUNTRY\_ALPHA, A\_STUDY, A\_WAVE, S018, S025,}
+         \AttributeTok{happy =}\NormalTok{ Q46, }\AttributeTok{gender =}\NormalTok{ Q260, }\AttributeTok{age =}\NormalTok{ Q262, }\AttributeTok{age6 =}\NormalTok{ X003R, }\AttributeTok{marital =}\NormalTok{ Q273,}
+         \AttributeTok{children =}\NormalTok{ Q274, }\AttributeTok{educ =}\NormalTok{ Q275, }\AttributeTok{educ3 =}\NormalTok{ Q275R, }\AttributeTok{job =}\NormalTok{ Q279, }\AttributeTok{chief =}\NormalTok{ Q285,}
+         \AttributeTok{mpol\_leader =}\NormalTok{ Q29, }\AttributeTok{conf\_wmov =}\NormalTok{ Q80, }\AttributeTok{member\_wgroup =}\NormalTok{ Q104, }\AttributeTok{w\_lcorrupt =}\NormalTok{ Q119,}
+         \AttributeTok{religious =}\NormalTok{ Q173, }\AttributeTok{prostitution =}\NormalTok{ Q183, }\AttributeTok{abortion =}\NormalTok{ Q184, }\AttributeTok{divorce =}\NormalTok{ Q185,}
+         \AttributeTok{m\_beatw =}\NormalTok{ Q189, }\AttributeTok{interest\_pol =}\NormalTok{ Q199, }\AttributeTok{discuss\_pol =}\NormalTok{ Q200, }\AttributeTok{w\_poleq =}\NormalTok{ Q233,}
+         \AttributeTok{wsame\_rights =}\NormalTok{ Q249, }\AttributeTok{incomel =}\NormalTok{ Q288R) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{filter}\NormalTok{(}\FunctionTok{if\_all}\NormalTok{(}\FunctionTok{where}\NormalTok{(is.numeric), }\SpecialCharTok{\textasciitilde{}}\NormalTok{ . }\SpecialCharTok{\textgreater{}=} \DecValTok{0}\NormalTok{),}
+\NormalTok{         job }\SpecialCharTok{!=} \DecValTok{8}\NormalTok{)}
+
+\CommentTok{\# Ajuste das variaveis e criacao do indice identidade}
+\NormalTok{wvs }\OtherTok{\textless{}{-}}\NormalTok{ wvs }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\FunctionTok{across}\NormalTok{(}\FunctionTok{c}\NormalTok{(wsame\_rights, prostitution, abortion, divorce, m\_beatw), }\SpecialCharTok{\textasciitilde{}}\NormalTok{ . }\SpecialCharTok{/} \DecValTok{10}\NormalTok{), }\CommentTok{\# normalizando indices de 0 a 10}
+         \AttributeTok{mpol\_leader =} \FunctionTok{ifelse}\NormalTok{(mpol\_leader }\SpecialCharTok{\textless{}=} \DecValTok{2}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{),}
+         \AttributeTok{conf\_wmov =} \FunctionTok{ifelse}\NormalTok{(conf\_wmov }\SpecialCharTok{\textless{}=} \DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{),}
+         \AttributeTok{w\_lcorrupt =} \FunctionTok{ifelse}\NormalTok{(w\_lcorrupt }\SpecialCharTok{\textless{}=} \DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{),}
+         \AttributeTok{m\_beatw =} \DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ m\_beatw) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{identidade =}\NormalTok{ mpol\_leader }\SpecialCharTok{+}\NormalTok{ conf\_wmov }\SpecialCharTok{+}\NormalTok{ w\_lcorrupt }\SpecialCharTok{+}\NormalTok{ wsame\_rights }\SpecialCharTok{+}
+\NormalTok{                      prostitution }\SpecialCharTok{+}\NormalTok{ abortion }\SpecialCharTok{+}\NormalTok{ divorce }\SpecialCharTok{+}\NormalTok{ m\_beatw) }
+
+\CommentTok{\# Ajustes de tipos e calculo do multiplicador do peso amostral}
+\NormalTok{wvs }\OtherTok{\textless{}{-}}\NormalTok{ wvs }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\FunctionTok{across}\NormalTok{(}\FunctionTok{c}\NormalTok{(country, gender, age6, marital, educ3, job, chief,}
+\NormalTok{                  mpol\_leader, conf\_wmov, member\_wgroup, w\_lcorrupt,}
+\NormalTok{                  religious, wsame\_rights, incomel), as.factor)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(country) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{S018R =} \DecValTok{1000} \SpecialCharTok{/} \FunctionTok{n}\NormalTok{()) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{age2 =}\NormalTok{ age}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{,}
+         \AttributeTok{happy =} \FunctionTok{ifelse}\NormalTok{(happy }\SpecialCharTok{\textless{}=}\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{),}
+         \AttributeTok{gender =} \FunctionTok{fct\_recode}\NormalTok{(gender,}
+                          \StringTok{"Male"} \OtherTok{=} \StringTok{"1"}\NormalTok{,}
+                          \StringTok{"Female"} \OtherTok{=} \StringTok{"2"}\NormalTok{),}
+         \AttributeTok{marital =} \FunctionTok{fct\_collapse}\NormalTok{(marital, }
+                                \StringTok{"Married"} \OtherTok{=} \FunctionTok{c}\NormalTok{(}\StringTok{"1"}\NormalTok{, }\StringTok{"2"}\NormalTok{),}
+                                \StringTok{"Divorced"} \OtherTok{=} \StringTok{"3"}\NormalTok{,}
+                                \StringTok{"Separated"} \OtherTok{=} \StringTok{"4"}\NormalTok{,}
+                                \StringTok{"Widowed"} \OtherTok{=} \StringTok{"5"}\NormalTok{,}
+                                \StringTok{"Single"} \OtherTok{=} \StringTok{"6"}\NormalTok{),}
+         \AttributeTok{job =} \FunctionTok{fct\_collapse}\NormalTok{(job,}
+                            \StringTok{"Full{-}time"} \OtherTok{=} \FunctionTok{c}\NormalTok{(}\StringTok{"1"}\NormalTok{, }\StringTok{"3"}\NormalTok{),}
+                            \StringTok{"Not working"} \OtherTok{=} \FunctionTok{c}\NormalTok{(}\StringTok{"2"}\NormalTok{, }\StringTok{"4"}\NormalTok{, }\StringTok{"6"}\NormalTok{),}
+                            \StringTok{"Housewife"} \OtherTok{=} \StringTok{"5"}\NormalTok{,}
+                            \StringTok{"Unemployed"} \OtherTok{=} \StringTok{"7"}\NormalTok{),}
+         \AttributeTok{chief =} \FunctionTok{fct\_recode}\NormalTok{(chief,}
+                            \StringTok{"0"} \OtherTok{=} \StringTok{"2"}\NormalTok{,}
+                            \StringTok{"1"} \OtherTok{=} \StringTok{"1"}\NormalTok{),}
+         \AttributeTok{member\_wgroup =} \FunctionTok{fct\_collapse}\NormalTok{(member\_wgroup,}
+                                      \StringTok{"0"} \OtherTok{=} \StringTok{"0"}\NormalTok{,}
+                                      \StringTok{"1"} \OtherTok{=} \FunctionTok{c}\NormalTok{(}\StringTok{"1"}\NormalTok{, }\StringTok{"2"}\NormalTok{)),}
+         \AttributeTok{religious =} \FunctionTok{fct\_collapse}\NormalTok{(religious,}
+                                  \StringTok{"Religious"} \OtherTok{=} \StringTok{"1"}\NormalTok{,}
+                                  \StringTok{"Not religious"} \OtherTok{=} \FunctionTok{c}\NormalTok{(}\StringTok{"2"}\NormalTok{, }\StringTok{"3"}\NormalTok{)))}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{estimando-o-primeiro-estagio}{%
+\paragraph{Estimando o primeiro
+estagio}\label{estimando-o-primeiro-estagio}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{idd\_fit }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(identidade }\SpecialCharTok{\textasciitilde{}}\NormalTok{ age }\SpecialCharTok{+}\NormalTok{ age2 }\SpecialCharTok{+}\NormalTok{ gender }\SpecialCharTok{+}\NormalTok{ educ }\SpecialCharTok{+}\NormalTok{ children }\SpecialCharTok{+}\NormalTok{ marital }\SpecialCharTok{+} 
+\NormalTok{                           chief }\SpecialCharTok{+}\NormalTok{ job }\SpecialCharTok{+}\NormalTok{ member\_wgroup }\SpecialCharTok{+}\NormalTok{ country,}
+              \AttributeTok{data =}\NormalTok{ wvs)}
+\FunctionTok{summary}\NormalTok{(idd\_fit)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = identidade ~ age + age2 + gender + educ + children + 
+##     marital + chief + job + member_wgroup + country, data = wvs)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.7644 -0.7255  0.0271  0.7412  4.1198 
+## 
+## Coefficients:
+##                    Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)       5.409e+00  5.841e-02  92.594  < 2e-16 ***
+## age               3.179e-04  1.786e-03   0.178 0.858721    
+## age2             -1.671e-05  1.874e-05  -0.892 0.372435    
+## genderFemale      2.557e-01  1.034e-02  24.735  < 2e-16 ***
+## educ              5.749e-02  2.626e-03  21.890  < 2e-16 ***
+## children         -8.496e-03  3.426e-03  -2.480 0.013151 *  
+## maritalDivorced   1.171e-01  2.206e-02   5.309 1.10e-07 ***
+## maritalSeparated  6.424e-02  2.962e-02   2.169 0.030071 *  
+## maritalWidowed   -2.111e-02  2.231e-02  -0.946 0.343952    
+## maritalSingle     8.041e-02  1.340e-02   6.003 1.95e-09 ***
+## chief0            3.176e-03  1.082e-02   0.294 0.769125    
+## jobNot working    8.500e-03  1.228e-02   0.692 0.488936    
+## jobHousewife     -6.006e-02  1.618e-02  -3.712 0.000205 ***
+## jobUnemployed    -3.721e-02  1.803e-02  -2.063 0.039097 *  
+## member_wgroup1   -9.970e-03  1.304e-02  -0.765 0.444546    
+## countryARG       -7.572e-01  6.234e-02 -12.147  < 2e-16 ***
+## countryARM       -1.931e+00  7.094e-02 -27.226  < 2e-16 ***
+## countryAUS        1.514e-01  4.881e-02   3.102 0.001920 ** 
+## countryBGD       -1.550e+00  5.373e-02 -28.852  < 2e-16 ***
+## countryBOL       -1.318e+00  4.863e-02 -27.090  < 2e-16 ***
+## countryBRA       -7.650e-01  5.211e-02 -14.680  < 2e-16 ***
+## countryCAN       -3.747e-02  4.311e-02  -0.869 0.384738    
+## countryCHL       -9.842e-01  5.923e-02 -16.617  < 2e-16 ***
+## countryCOL       -1.235e+00  4.902e-02 -25.192  < 2e-16 ***
+## countryCYP       -1.149e+00  6.011e-02 -19.113  < 2e-16 ***
+## countryCZE       -6.309e-01  5.213e-02 -12.103  < 2e-16 ***
+## countryDEU       -9.641e-02  5.134e-02  -1.878 0.060390 .  
+## countryECU       -1.110e+00  5.282e-02 -21.013  < 2e-16 ***
+## countryETH       -1.293e+00  5.386e-02 -24.004  < 2e-16 ***
+## countryGRC       -7.272e-01  5.318e-02 -13.673  < 2e-16 ***
+## countryGTM       -1.535e+00  5.330e-02 -28.795  < 2e-16 ***
+## countryHKG       -1.151e+00  4.645e-02 -24.786  < 2e-16 ***
+## countryIDN       -1.945e+00  4.852e-02 -40.087  < 2e-16 ***
+## countryJPN       -5.304e-01  6.091e-02  -8.708  < 2e-16 ***
+## countryKAZ       -1.656e+00  5.681e-02 -29.142  < 2e-16 ***
+## countryKEN       -1.611e+00  5.321e-02 -30.272  < 2e-16 ***
+## countryKGZ       -1.974e+00  5.376e-02 -36.718  < 2e-16 ***
+## countryKOR       -1.508e+00  4.997e-02 -30.176  < 2e-16 ***
+## countryLBY       -2.454e+00  5.837e-02 -42.035  < 2e-16 ***
+## countryMAC       -1.060e+00  5.633e-02 -18.823  < 2e-16 ***
+## countryMAR       -1.516e+00  5.061e-02 -29.958  < 2e-16 ***
+## countryMDV       -1.411e+00  5.392e-02 -26.177  < 2e-16 ***
+## countryMEX       -1.184e+00  4.867e-02 -24.335  < 2e-16 ***
+## countryMMR       -1.546e+00  5.053e-02 -30.591  < 2e-16 ***
+## countryMNG       -1.841e+00  4.927e-02 -37.363  < 2e-16 ***
+## countryMYS       -1.759e+00  4.972e-02 -35.382  < 2e-16 ***
+## countryNGA       -2.107e+00  5.283e-02 -39.885  < 2e-16 ***
+## countryNIC       -1.280e+00  5.144e-02 -24.891  < 2e-16 ***
+## countryNLD        3.619e-01  5.529e-02   6.545 5.98e-11 ***
+## countryNZL        3.365e-01  6.425e-02   5.238 1.63e-07 ***
+## countryPAK       -1.951e+00  5.071e-02 -38.486  < 2e-16 ***
+## countryPER       -1.270e+00  5.274e-02 -24.090  < 2e-16 ***
+## countryPHL       -1.302e+00  5.080e-02 -25.636  < 2e-16 ***
+## countryPRI       -7.978e-01  5.294e-02 -15.070  < 2e-16 ***
+## countryROU       -1.366e+00  5.875e-02 -23.244  < 2e-16 ***
+## countryRUS       -1.411e+00  5.197e-02 -27.154  < 2e-16 ***
+## countrySGP       -1.117e+00  4.876e-02 -22.901  < 2e-16 ***
+## countrySRB       -1.465e+00  5.609e-02 -26.119  < 2e-16 ***
+## countrySVK       -1.012e+00  5.378e-02 -18.821  < 2e-16 ***
+## countryTHA       -1.538e+00  5.488e-02 -28.017  < 2e-16 ***
+## countryTJK       -1.686e+00  5.244e-02 -32.151  < 2e-16 ***
+## countryTUN       -1.996e+00  5.455e-02 -36.588  < 2e-16 ***
+## countryTUR       -1.491e+00  4.731e-02 -31.528  < 2e-16 ***
+## countryTWN       -1.043e+00  5.077e-02 -20.551  < 2e-16 ***
+## countryUKR       -1.432e+00  6.527e-02 -21.947  < 2e-16 ***
+## countryURY       -2.936e-01  5.838e-02  -5.030 4.92e-07 ***
+## countryUSA       -5.829e-01  4.559e-02 -12.787  < 2e-16 ***
+## countryVEN       -1.272e+00  5.065e-02 -25.117  < 2e-16 ***
+## countryVNM       -1.095e+00  5.075e-02 -21.577  < 2e-16 ***
+## countryZWE       -1.552e+00  5.204e-02 -29.817  < 2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.08 on 60252 degrees of freedom
+## Multiple R-squared:  0.2799, Adjusted R-squared:  0.2791 
+## F-statistic: 339.4 on 69 and 60252 DF,  p-value: < 2.2e-16
+\end{verbatim}
+
+\hypertarget{definindo-a-survey-ajustada-ao-plano-amostral}{%
+\paragraph{Definindo a Survey ajustada ao plano
+amostral}\label{definindo-a-survey-ajustada-ao-plano-amostral}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy }\OtherTok{\textless{}{-}} \FunctionTok{svydesign}\NormalTok{(}\AttributeTok{id =} \SpecialCharTok{\textasciitilde{}}\DecValTok{1}\NormalTok{,}
+                 \AttributeTok{strata =} \SpecialCharTok{\textasciitilde{}}\NormalTok{S025,}
+                 \AttributeTok{weights =} \SpecialCharTok{\textasciitilde{}}\NormalTok{(W\_WEIGHT }\SpecialCharTok{*}\NormalTok{ S018R), }
+                 \AttributeTok{data =}\NormalTok{ wvs)}
+
+\CommentTok{\# Inserido a identidade ajustada na base}
+\NormalTok{svy}\SpecialCharTok{$}\NormalTok{variables }\OtherTok{\textless{}{-}}\NormalTok{ svy}\SpecialCharTok{$}\NormalTok{variables }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{identidadef =}\NormalTok{ idd\_fit}\SpecialCharTok{$}\NormalTok{fitted.values) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(country) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{P =} \FunctionTok{mean}\NormalTok{(identidade)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{delta =}\NormalTok{ (identidadef }\SpecialCharTok{{-}}\NormalTok{ P)}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{regredindo-o-delta}{%
+\paragraph{Regredindo o Delta}\label{regredindo-o-delta}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{delta\_fit }\OtherTok{\textless{}{-}} \FunctionTok{svyglm}\NormalTok{(delta }\SpecialCharTok{\textasciitilde{}}\NormalTok{ age }\SpecialCharTok{+}\NormalTok{ age2 }\SpecialCharTok{+}\NormalTok{ gender }\SpecialCharTok{+}\NormalTok{ children }\SpecialCharTok{+}\NormalTok{ marital }\SpecialCharTok{+}\NormalTok{ religious }\SpecialCharTok{+}\NormalTok{ job,}
+                    \AttributeTok{design =}\NormalTok{ svy,}
+                    \AttributeTok{family =}\NormalTok{ stats}\SpecialCharTok{::}\FunctionTok{gaussian}\NormalTok{(}\AttributeTok{link =} \StringTok{"identity"}\NormalTok{))}
+\FunctionTok{summary}\NormalTok{(delta\_fit)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## svyglm(formula = delta ~ age + age2 + gender + children + marital + 
+##     religious + job, design = svy, family = stats::gaussian(link = "identity"))
+## 
+## Survey design:
+## svydesign(id = ~1, strata = ~S025, weights = ~(W_WEIGHT * S018R), 
+##     data = wvs)
+## 
+## Coefficients:
+##                          Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)             4.335e-02  1.821e-03  23.811  < 2e-16 ***
+## age                    -9.869e-04  8.589e-05 -11.491  < 2e-16 ***
+## age2                    1.298e-05  9.555e-07  13.585  < 2e-16 ***
+## genderFemale            2.417e-03  4.155e-04   5.817 6.03e-09 ***
+## children                1.823e-03  1.490e-04  12.233  < 2e-16 ***
+## maritalDivorced         7.157e-03  1.008e-03   7.102 1.24e-12 ***
+## maritalSeparated       -1.150e-03  1.058e-03  -1.087   0.2770    
+## maritalWidowed         -9.824e-03  9.534e-04 -10.304  < 2e-16 ***
+## maritalSingle           8.611e-03  5.582e-04  15.426  < 2e-16 ***
+## religiousNot religious -6.390e-04  3.794e-04  -1.684   0.0921 .  
+## jobNot working         -2.029e-03  5.215e-04  -3.891 9.98e-05 ***
+## jobHousewife           -1.972e-02  4.817e-04 -40.930  < 2e-16 ***
+## jobUnemployed          -1.696e-03  7.022e-04  -2.416   0.0157 *  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for gaussian family taken to be 0.001384483)
+## 
+## Number of Fisher Scoring iterations: 2
+\end{verbatim}
+
+\hypertarget{estimando-os-modelos}{%
+\subsection{Estimando os modelos}\label{estimando-os-modelos}}
+
+\hypertarget{mpl}{%
+\paragraph{MPL}\label{mpl}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fit\_mpl }\OtherTok{\textless{}{-}} \FunctionTok{svyglm}\NormalTok{(happy }\SpecialCharTok{\textasciitilde{}}\NormalTok{ age }\SpecialCharTok{+}\NormalTok{ age2 }\SpecialCharTok{+}\NormalTok{ gender }\SpecialCharTok{+}\NormalTok{ children }\SpecialCharTok{+}\NormalTok{ marital }\SpecialCharTok{+}\NormalTok{ religious }\SpecialCharTok{+}\NormalTok{ educ }\SpecialCharTok{+}
+\NormalTok{                    delta }\SpecialCharTok{+}\NormalTok{ delta}\SpecialCharTok{:}\NormalTok{gender,}
+                  \AttributeTok{design =}\NormalTok{ svy,}
+                  \AttributeTok{family =}\NormalTok{ stats}\SpecialCharTok{::}\FunctionTok{gaussian}\NormalTok{(}\AttributeTok{link =} \StringTok{"identity"}\NormalTok{))}
+\FunctionTok{summary}\NormalTok{(fit\_mpl)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## svyglm(formula = happy ~ age + age2 + gender + children + marital + 
+##     religious + educ + delta + delta:gender, design = svy, family = stats::gaussian(link = "identity"))
+## 
+## Survey design:
+## svydesign(id = ~1, strata = ~S025, weights = ~(W_WEIGHT * S018R), 
+##     data = wvs)
+## 
+## Coefficients:
+##                          Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)             8.846e-01  1.588e-02  55.716  < 2e-16 ***
+## age                    -2.468e-03  6.809e-04  -3.624 0.000290 ***
+## age2                    2.021e-05  7.008e-06   2.884 0.003925 ** 
+## genderFemale            2.422e-02  5.550e-03   4.363 1.28e-05 ***
+## children               -1.007e-03  1.194e-03  -0.843 0.399049    
+## maritalDivorced        -9.673e-02  9.556e-03 -10.123  < 2e-16 ***
+## maritalSeparated       -8.691e-02  1.322e-02  -6.573 4.97e-11 ***
+## maritalWidowed         -1.053e-01  9.745e-03 -10.803  < 2e-16 ***
+## maritalSingle          -4.746e-02  5.326e-03  -8.911  < 2e-16 ***
+## religiousNot religious -4.846e-03  3.409e-03  -1.422 0.155159    
+## educ                    1.490e-02  1.044e-03  14.262  < 2e-16 ***
+## delta                   2.972e-01  8.399e-02   3.539 0.000402 ***
+## genderFemale:delta     -4.294e-01  1.335e-01  -3.216 0.001299 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for gaussian family taken to be 0.1164447)
+## 
+## Number of Fisher Scoring iterations: 2
+\end{verbatim}
+
+\hypertarget{probit}{%
+\paragraph{Probit}\label{probit}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fit\_probit }\OtherTok{\textless{}{-}} \FunctionTok{svyglm}\NormalTok{(happy }\SpecialCharTok{\textasciitilde{}}\NormalTok{ age }\SpecialCharTok{+}\NormalTok{ age2 }\SpecialCharTok{+}\NormalTok{ gender }\SpecialCharTok{+}\NormalTok{ children }\SpecialCharTok{+}\NormalTok{ marital }\SpecialCharTok{+}\NormalTok{ religious }\SpecialCharTok{+}\NormalTok{ educ }\SpecialCharTok{+}
+\NormalTok{                       delta }\SpecialCharTok{+}\NormalTok{ delta}\SpecialCharTok{:}\NormalTok{gender,}
+                     \AttributeTok{design =}\NormalTok{ svy,}
+                     \AttributeTok{family =} \FunctionTok{binomial}\NormalTok{(}\AttributeTok{link =} \StringTok{"probit"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in eval(family$initialize): non-integer #successes in a binomial glm!
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(fit\_probit)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## svyglm(formula = happy ~ age + age2 + gender + children + marital + 
+##     religious + educ + delta + delta:gender, design = svy, family = binomial(link = "probit"))
+## 
+## Survey design:
+## svydesign(id = ~1, strata = ~S025, weights = ~(W_WEIGHT * S018R), 
+##     data = wvs)
+## 
+## Coefficients:
+##                          Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)             1.202e+00  7.230e-02  16.623  < 2e-16 ***
+## age                    -1.127e-02  3.056e-03  -3.687 0.000227 ***
+## age2                    9.219e-05  3.100e-05   2.974 0.002942 ** 
+## genderFemale            1.128e-01  2.592e-02   4.350 1.36e-05 ***
+## children               -4.542e-03  5.251e-03  -0.865 0.387048    
+## maritalDivorced        -3.996e-01  3.414e-02 -11.703  < 2e-16 ***
+## maritalSeparated       -3.623e-01  4.680e-02  -7.741 1.01e-14 ***
+## maritalWidowed         -4.153e-01  3.426e-02 -12.124  < 2e-16 ***
+## maritalSingle          -2.227e-01  2.432e-02  -9.155  < 2e-16 ***
+## religiousNot religious -2.389e-02  1.588e-02  -1.504 0.132521    
+## educ                    6.985e-02  4.844e-03  14.422  < 2e-16 ***
+## delta                   1.308e+00  3.716e-01   3.520 0.000432 ***
+## genderFemale:delta     -1.916e+00  6.083e-01  -3.149 0.001638 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1.00045)
+## 
+## Number of Fisher Scoring iterations: 4
+\end{verbatim}
+
+\hypertarget{logit}{%
+\paragraph{Logit}\label{logit}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fit\_logit }\OtherTok{\textless{}{-}} \FunctionTok{svyglm}\NormalTok{(happy }\SpecialCharTok{\textasciitilde{}}\NormalTok{ age }\SpecialCharTok{+}\NormalTok{ age2 }\SpecialCharTok{+}\NormalTok{ gender }\SpecialCharTok{+}\NormalTok{ children }\SpecialCharTok{+}\NormalTok{ marital }\SpecialCharTok{+}\NormalTok{ religious }\SpecialCharTok{+}\NormalTok{ educ }\SpecialCharTok{+}
+\NormalTok{                      delta }\SpecialCharTok{+}\NormalTok{ delta}\SpecialCharTok{:}\NormalTok{gender,}
+                    \AttributeTok{design =}\NormalTok{ svy,}
+                    \AttributeTok{family =} \FunctionTok{binomial}\NormalTok{(}\AttributeTok{link =} \StringTok{"logit"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in eval(family$initialize): non-integer #successes in a binomial glm!
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(fit\_logit)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## svyglm(formula = happy ~ age + age2 + gender + children + marital + 
+##     religious + educ + delta + delta:gender, design = svy, family = binomial(link = "logit"))
+## 
+## Survey design:
+## svydesign(id = ~1, strata = ~S025, weights = ~(W_WEIGHT * S018R), 
+##     data = wvs)
+## 
+## Coefficients:
+##                          Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)             2.060e+00  1.339e-01  15.391  < 2e-16 ***
+## age                    -2.109e-02  5.645e-03  -3.736 0.000187 ***
+## age2                    1.720e-04  5.702e-05   3.016 0.002564 ** 
+## genderFemale            2.014e-01  4.829e-02   4.170 3.05e-05 ***
+## children               -7.883e-03  9.623e-03  -0.819 0.412704    
+## maritalDivorced        -7.256e-01  5.985e-02 -12.123  < 2e-16 ***
+## maritalSeparated       -6.586e-01  8.211e-02  -8.021 1.07e-15 ***
+## maritalWidowed         -7.420e-01  5.994e-02 -12.379  < 2e-16 ***
+## maritalSingle          -4.209e-01  4.477e-02  -9.401  < 2e-16 ***
+## religiousNot religious -4.241e-02  2.948e-02  -1.439 0.150279    
+## educ                    1.286e-01  8.961e-03  14.345  < 2e-16 ***
+## delta                   2.291e+00  6.824e-01   3.357 0.000790 ***
+## genderFemale:delta     -3.292e+00  1.125e+00  -2.927 0.003427 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 0.9999327)
+## 
+## Number of Fisher Scoring iterations: 4
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Odds ratio do logit}
+\FunctionTok{exp}\NormalTok{(}\FunctionTok{cbind}\NormalTok{(}\FunctionTok{coef}\NormalTok{(fit\_logit)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                              [,1]
+## (Intercept)            7.84878997
+## age                    0.97913134
+## age2                   1.00017199
+## genderFemale           1.22307772
+## children               0.99214843
+## maritalDivorced        0.48404610
+## maritalSeparated       0.51759929
+## maritalWidowed         0.47616727
+## maritalSingle          0.65648418
+## religiousNot religious 0.95847446
+## educ                   1.13718488
+## delta                  9.88100965
+## genderFemale:delta     0.03717516
+\end{verbatim}
+
+\hypertarget{calculando-diagnosticos-do-modelo}{%
+\paragraph{Calculando diagnosticos do
+modelo}\label{calculando-diagnosticos-do-modelo}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{roc }\OtherTok{\textless{}{-}} \FunctionTok{rocit}\NormalTok{(}\AttributeTok{score =}\NormalTok{ fit\_logit}\SpecialCharTok{$}\NormalTok{fitted.values, }\AttributeTok{class =}\NormalTok{ fit\_logit}\SpecialCharTok{$}\NormalTok{y)}
+\FunctionTok{plot}\NormalTok{(roc)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{aps2_files/figure-latex/unnamed-chunk-10-1.pdf}
+
+\hypertarget{gerando-um-segundo-logit-sem-fazer-o-quadrado-do-delta}{%
+\paragraph{Gerando um segundo logit, sem fazer o quadrado do
+delta}\label{gerando-um-segundo-logit-sem-fazer-o-quadrado-do-delta}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy2 }\OtherTok{\textless{}{-}} \FunctionTok{svydesign}\NormalTok{(}\AttributeTok{id =} \SpecialCharTok{\textasciitilde{}}\DecValTok{1}\NormalTok{,}
+                  \AttributeTok{strata =} \SpecialCharTok{\textasciitilde{}}\NormalTok{S025,}
+                  \AttributeTok{weights =} \SpecialCharTok{\textasciitilde{}}\NormalTok{(W\_WEIGHT }\SpecialCharTok{*}\NormalTok{ S018R), }
+                  \AttributeTok{data =}\NormalTok{ wvs)}
+
+\NormalTok{svy2}\SpecialCharTok{$}\NormalTok{variables }\OtherTok{\textless{}{-}}\NormalTok{ svy2}\SpecialCharTok{$}\NormalTok{variables }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{identidadef =}\NormalTok{ idd\_fit}\SpecialCharTok{$}\NormalTok{fitted.values) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(country) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{P =} \FunctionTok{mean}\NormalTok{(identidade)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{delta =}\NormalTok{ identidadef }\SpecialCharTok{{-}}\NormalTok{ P)}
+
+\NormalTok{fit\_logit2 }\OtherTok{\textless{}{-}} \FunctionTok{svyglm}\NormalTok{(happy }\SpecialCharTok{\textasciitilde{}}\NormalTok{ age }\SpecialCharTok{+}\NormalTok{ age2 }\SpecialCharTok{+}\NormalTok{ gender }\SpecialCharTok{+}\NormalTok{ children }\SpecialCharTok{+}\NormalTok{ marital }\SpecialCharTok{+}\NormalTok{ religious }\SpecialCharTok{+}\NormalTok{ educ }\SpecialCharTok{+}
+\NormalTok{                      delta }\SpecialCharTok{+}\NormalTok{ delta}\SpecialCharTok{:}\NormalTok{gender,}
+                    \AttributeTok{design =}\NormalTok{ svy2,}
+                    \AttributeTok{family =} \FunctionTok{binomial}\NormalTok{(}\AttributeTok{link =} \StringTok{"logit"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in eval(family$initialize): non-integer #successes in a binomial glm!
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(fit\_logit2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## svyglm(formula = happy ~ age + age2 + gender + children + marital + 
+##     religious + educ + delta + delta:gender, design = svy2, family = binomial(link = "logit"))
+## 
+## Survey design:
+## svydesign(id = ~1, strata = ~S025, weights = ~(W_WEIGHT * S018R), 
+##     data = wvs)
+## 
+## Coefficients:
+##                          Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)             1.889e+00  1.433e-01  13.184  < 2e-16 ***
+## age                    -2.225e-02  5.612e-03  -3.965 7.36e-05 ***
+## age2                    1.694e-04  5.675e-05   2.985  0.00283 ** 
+## genderFemale            3.696e-01  6.616e-02   5.586 2.33e-08 ***
+## children               -1.223e-02  9.704e-03  -1.260  0.20764    
+## maritalDivorced        -6.410e-01  6.402e-02 -10.012  < 2e-16 ***
+## maritalSeparated       -6.093e-01  8.370e-02  -7.279 3.40e-13 ***
+## maritalWidowed         -7.799e-01  6.044e-02 -12.903  < 2e-16 ***
+## maritalSingle          -3.579e-01  4.729e-02  -7.569 3.81e-14 ***
+## religiousNot religious -5.269e-02  2.965e-02  -1.777  0.07556 .  
+## educ                    1.666e-01  1.378e-02  12.094  < 2e-16 ***
+## delta                  -1.241e+00  2.776e-01  -4.469 7.87e-06 ***
+## genderFemale:delta      1.472e-01  2.024e-01   0.727  0.46704    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1.000186)
+## 
+## Number of Fisher Scoring iterations: 4
+\end{verbatim}
+
+Comparando os dois modelos
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{roc2 }\OtherTok{\textless{}{-}} \FunctionTok{rocit}\NormalTok{(}\AttributeTok{score =}\NormalTok{ fit\_logit2}\SpecialCharTok{$}\NormalTok{fitted.values, }\AttributeTok{class =}\NormalTok{ fit\_logit2}\SpecialCharTok{$}\NormalTok{y)}
+\FunctionTok{plot}\NormalTok{(roc2)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{aps2_files/figure-latex/unnamed-chunk-12-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(roc}\SpecialCharTok{$}\NormalTok{AUC)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.5908867
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(roc2}\SpecialCharTok{$}\NormalTok{AUC)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.5903371
+\end{verbatim}
+
+\end{document}

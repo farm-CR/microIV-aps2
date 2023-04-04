@@ -1,0 +1,31 @@
+"0","```r
+A <- matrix(c(1:10), nrow = 5, byrow = TRUE)
+
+rownames(A) <- c(\"a\", \"b\", \"c\", \"d\", \"e\")
+colnames(A) <- c(\"A\", \"B\")
+
+# row 3, column 2, value 6
+A[3, 2]
+```"
+"1","[1] 6
+"
+"0","```r
+# row 1, all columns, values 1 2
+A[1,]
+```"
+"1","A B 
+1 2 
+"
+"0","```r
+# all rows, column 2, values 2 4 6 8 10
+A[, 2]
+```"
+"1"," a  b  c  d  e 
+ 2  4  6  8 10 
+"
+"0","```r
+# row \"e\", column \"B\", value 10
+A[\"e\", \"B\"]
+```"
+"1","[1] 10
+"

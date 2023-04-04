@@ -1,0 +1,2 @@
+"0","roc <- rocit(score = fit_logit$fitted.values, class = fit_logit$y)"
+"0","plot(roc)"

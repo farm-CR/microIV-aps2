@@ -1,0 +1,5 @@
+"0","(stats_mean <- data.frame(svymean(~ age + gender + educ + children + marital + "
+"0","                                    chief + job + member_wgroup,"
+"0","                                  svy,"
+"0","                                  na.rm = TRUE,"
+"0","                                  parm=NA)))"

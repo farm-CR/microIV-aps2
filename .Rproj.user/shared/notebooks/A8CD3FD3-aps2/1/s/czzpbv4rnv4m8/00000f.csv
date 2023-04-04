@@ -1,0 +1,9 @@
+"0","wvs_df <- read_csv(""WVS_Cross-National_Wave_7_csv_v5_0.csv"")"
+"2","[1mRows: [22m[34m94278[39m [1mColumns: [22m[34m606[39m"
+"2","[36m──[39m [1mColumn specification[22m [36m───────────────────────────────────────────────────────────────────────────────[39m
+[1mDelimiter:[22m "",""
+[31mchr[39m  (12): version, doi, B_COUNTRY_ALPHA, C_COW_ALPHA, LNGE_ISO, X002_02B, V002A_01, V001A_01, Part...
+[32mdbl[39m (594): A_WAVE, A_YEAR, A_STUDY, B_COUNTRY, C_COW_NUM, D_INTERVIEW, S007, J_INTDATE, FW_END, FW_..."
+"2","
+[36mℹ[39m Use `spec()` to retrieve the full column specification for this data.
+[36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message."
